@@ -15,7 +15,7 @@ test.describe("Todo App test", async () => {
         await todoPage.tasks.checkTaskCompleted("Task 2");
     });
 
-    test.only('TL-19-5 check filters ALL, ACTIVE, COMPLETED', async ({page}) => {
+    test('TL-19-5 check filters ALL, ACTIVE, COMPLETED', async ({page}) => {
         const todoPage = new TodoPage(page);
         await todoPage.open()
         await todoPage.createTask("Task 1")
@@ -31,7 +31,7 @@ test.describe("Todo App test", async () => {
         await todoPage.checkTaskCount(1);
     });
 
-    test.only('TL-19-6 check filters ALL, ACTIVE, COMPLETED', async ({page}) => {
+    test('TL-19-6 check Clear Completed', async ({page}) => {
         const todoPage = new TodoPage(page);
         await todoPage.open()
         await todoPage.createTask("Task 1")
